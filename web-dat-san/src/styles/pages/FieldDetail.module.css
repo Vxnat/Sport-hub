@@ -1,0 +1,238 @@
+/* app/field-detail/FieldDetail.module.css or pages/field-detail/FieldDetail.module.css */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  border-radius: 5px;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+
+.heroTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Main Content */
+.container {
+  display: flex;
+  flex: 1;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Info Section */
+.infoSection {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.description {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.infoDetails {
+  margin-bottom: 20px;
+}
+
+.infoItem {
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.subTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.amenities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.amenityItem {
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkIcon {
+  color: var(--primary);
+}
+
+/* Map Section */
+.mapSection {
+  margin-bottom: 50px;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 300px;
+  background: var(--background);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 16px;
+}
+
+/* Gallery Section */
+.gallerySection {
+  margin-bottom: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.galleryImage {
+  width: calc(33.333% - 11px);
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galleryImage:hover {
+  transform: scale(1.05);
+}
+
+/* Booking Sidebar */
+.sidebar {
+  flex: 0 0 300px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.sidebarTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  width: 100%;
+}
+
+.bookButton {
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.bookButton:hover {
+  background-color: var(--secondary);
+}
+
+/* Icons */
+.icon {
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .galleryImage {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: unset;
+    width: 100%;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+  }
+
+  .galleryImage {
+    width: 100%;
+  }
+}

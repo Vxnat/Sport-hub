@@ -1,0 +1,146 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 250px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.sidebarTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.sportList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sportItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--gray);
+  border-bottom: 1px solid transparent;
+}
+
+.sportItem:hover {
+  color: var(--secondary);
+  border-color: var(--primary);
+}
+
+.count {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+}
+
+.mainTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
+  text-align: center;
+}
+
+.fieldList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.fieldCard {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldImage {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.fieldContent {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldName {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.fieldInfo {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.detailButton {
+  margin-top: auto;
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.detailButton:hover {
+  background-color: var(--secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .fieldCard {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: unset;
+    width: 100%;
+  }
+
+  .fieldCard {
+    width: 100%;
+  }
+}

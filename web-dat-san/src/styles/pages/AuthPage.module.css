@@ -1,0 +1,112 @@
+/* app/auth/AuthPage.module.css or pages/auth/AuthPage.module.css */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Tab Navigation */
+.tabContainer {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  background: var(--white);
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid var(--secondary);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--gray);
+  background: #f3f4f6;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+  color: var(--white);
+  background: var(--secondary);
+}
+
+.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Form Container */
+.formContainer {
+  background: var(--white);
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+}
+
+.submitButton {
+  background-color: var(--primary);
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: var(--secondary);
+}
+
+.linkText {
+  font-size: 14px;
+  color: var(--gray);
+  text-align: center;
+  margin-top: 16px;
+}
+
+.link {
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .formContainer {
+    padding: 24px;
+  }
+}

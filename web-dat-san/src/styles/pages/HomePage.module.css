@@ -1,0 +1,153 @@
+/* app/Home.module.css or pages/Home.module.css */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Section */
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for better text readability */
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.heroTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: var(--secondary); /* Match the blue from your button/input */
+  border-bottom: 2px solid var(--secondary);
+}
+
+/* Search Bar */
+.searchBar {
+  display: flex;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #111827;
+  background-color: #ffffff;
+  outline: none;
+  min-width: 150px;
+}
+
+.input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.searchButton {
+  background-color: #f59e0b; /* Yellow color from the design */
+}
+
+.searchButton:hover {
+  background-color: #d97706;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureItem {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.featureTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.featureText {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+
+  .heroTitle {
+    font-size: 24px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+  }
+
+  .searchBar {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .select,
+  .input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
