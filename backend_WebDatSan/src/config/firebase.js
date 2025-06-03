@@ -1,0 +1,17 @@
+import admin from "firebase-admin";
+
+const serviceAccount = {
+  project_id: "sport-hub-34d7a",
+  private_key:
+    "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCRPHSvy9ySSj25\ns+E1xI5mRtzFHl9VeRhghdBYm2LntHv1j7wm+sXes/seuBw2SktPIZnvVKkNh0XM\n15JNe7hQ/2mBgDodIdiSdjcML4RgwibjVx49lNvgc1Gf+vVMqlAKhPEmLkOz0N20\nlToxiRzlQ6zviInXoB3AbFmm6GSW62DmzrsuYOhfb4cd5QMTfimD4ZMEKTma/6oZ\nrIJUKQQTR7dQanEc3ktNK+pjQVHqlfF2E3uqfK528LbbePL/BwF/sKJLSckV5K2w\nD27wpQXCOLOJbWynRRPlaObDcuMhagQXLJW8jZrO3WM4uHs7OnY7MOgzScNaqePj\nuAk3J3txAgMBAAECggEACradRj571dAOKj2qS49lOwbX0DPuWl1laUarA25APHv5\nd41pFq2sR5eahZM/2YK0zXCFbLx0//TONvm2kWqil676NxL2C8zBr1lzCWi+k230\nSml/Eecs1QC3W7K6bN5UqyylUT4Ga87oxne05Dngsh9s3qUsGIYiIQidEGKCJl5i\nvQYQAsaJV8ts9GQMkN0EL8LhkgcU7APmT9dywz+4ywtIu/IJGog4Q5P81C3vVbwX\nSivAV1N9vMw1hJdgQjOCuOfj8lm1UIwHKezUBOVmakhM0ei2odht2gJNXy/lndTF\nVSNBM8BthVZZQiJQQ9SlsMGwjAW+8rln4GleJGJK5QKBgQDJa/I91uwlSKbeyD3H\nnfbQDT2qXolkVnntqp86a+sB2LHFX2k/3WL9R7hi7inowlSbjr/CM81qim6RFGtk\ndYQ3M3by2NgOANrY44QvVLDQulArTpNYjIhwYtEg0Jz0Z8BPNz4bvRr0wtXPjufT\nA9f3TxXwypaEAcRiNDYxQMwMiwKBgQC4lxQ2sPAfTPf1kdhAuVClDxxKz9j5RYm5\nw7QgWTi6im/mcCknHwnnkJ7Ffl76ZNAL+5tBsaZLhDDT9KcG7N2qD8oVJHFcNZrf\nF6JJYpT6dlnwEA3SYDpH1xmmjlBNolwsIhx+ZIpAfhnC+qn/LYEqCErWxNfgO85D\nVRnPv/ercwKBgAJEpuuvWeVplgd4Ncnjq33YSFN80QtCNglJHJXp1TGmIQpZ8rN3\naL/1aMwkZnBqj81YpCwprSx/9pLHqhXthNmiSLqfWn993vkGRtzJlVwkXPa/4cTj\ngD3TvwshjkLqUC4ULyzcykrrTsERmOa1al8sktCtV1iRNIbuk5WmZyXVAoGBAIp3\nQgF4ntdL/GDoo2iB2n3GpPl1ipQKVrLTnCX757L+r8wTbLtc7CgZcxBAqGx5/RpQ\nBfm0kkLpiVsllbl7KxgrufI8IREDYQZiiykzWv+6keKjmEqsRmunbiVjcdeaqDuu\n5uLk9lREg3ygXa7+anqmN8V9aVZaZnJZvv/5R4cDAoGAE69309NQXt/dB7wPYp1s\nUQtUcM8TYWi5lttY81w8Gevf/tMph0Wx83QdQSH9XovuucwebdlqsFZYg/9ZOe79\n7Qooc7AdkSlISEbMFZQNBuKP5XEm6qwVtDz6/lol6NPXKhzVRBFT0yXsDVCbrdx/\nJMh8b1gYkJJ6NGXcHod5CLE=\n-----END PRIVATE KEY-----\n",
+  client_email:
+    "firebase-adminsdk-fbsvc@sport-hub-34d7a.iam.gserviceaccount.com",
+};
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+
+// Export auth để dùng ở mọi nơi
+export const auth = admin.auth();
+export { admin, serviceAccount };
